@@ -820,6 +820,12 @@ small,
 .site-header {
   text-align: center; }
 
+.site-title .avatar {
+  margin-right: 0.5rem;
+  width: 50px;
+  border-radius: 50%;
+  vertical-align: middle; }
+
 .site-header .site-nav {
   text-align: center; }
 
