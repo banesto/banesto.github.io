@@ -6,6 +6,7 @@ jQuery(function() {
     this.field('title', { boost: 10 });
     this.field('url');
     this.field('content');
+    this.field('category');
     this.field('date');
   });
 
