@@ -12,6 +12,5 @@ Pixyll now features:
 
 * Line anchors in code blocks and new syntax highlighting
 * A customizable variables file
-* Modular, and lighter weight CSS
 * No `max-width` media queries
 * Less highlighting

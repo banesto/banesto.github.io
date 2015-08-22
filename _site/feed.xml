@@ -15,7 +15,6 @@
 &lt;ul&gt;
   &lt;li&gt;Line anchors in code blocks and new syntax highlighting&lt;/li&gt;
   &lt;li&gt;A customizable variables file&lt;/li&gt;
-  &lt;li&gt;Modular, and lighter weight CSS&lt;/li&gt;
   &lt;li&gt;No &lt;code&gt;max-width&lt;/code&gt; media queries&lt;/li&gt;
   &lt;li&gt;Less highlighting&lt;/li&gt;
 &lt;/ul&gt;
