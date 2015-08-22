@@ -1,17 +1,28 @@
 ---
 layout:     post
-title:      So, What is Jekyll?
-date:       2014-06-09 12:32:18
-summary:    Transform your plain text into static websites and blogs. Simple, static, and blog-aware.
-categories: jekyll pixyll
+title:      Serializing form inputs into flat object
+date:       2015-08-21 12:32:18
+summary:    Simple and easy way to get form input attribute names and values as object.
+categories: javascript jQuery
 ---
 
-Jekyll is a tool for transforming your plain text into static websites and 
-blogs. It is simple, static, and blog-aware. Jekyll uses the 
-[Liquid](http://docs.shopify.com/themes/liquid-basics) templating
-language and has builtin [Markdown](http://daringfireball.net/projects/markdown/)
-and [Textile](http://en.wikipedia.org/wiki/Textile_(markup_language)) support.
+There is a ```serializeArray``` method available in jQuery which returns a broader,
+ quite cumbersome object, especially when everything you need is a attribue name and a value.
 
-It also ties in nicely to [Github Pages](https://pages.github.com/).
+This elegant little method gets it done in a nice way:
 
-Learn more about Jekyll on their [website](http://jekyllrb.com/).
+
+{% highlight coffee lineanchors %}
+$.fn.serializeObject = ->
+  o = {}
+  a = @serializeArray()
+  $.each a, ->
+    if o[@name] != undefined
+      if !o[@name].push
+        o[@name] = [ o[@name] ]
+      o[@name].push @value or ''
+    else
+      o[@name] = @value or ''
+    return
+  o
+{% endhighlight %}
