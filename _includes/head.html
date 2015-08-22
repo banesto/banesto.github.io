@@ -9,7 +9,11 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
     <!-- // <script src="{{ "/js/jekyll-search.min.js" | prepend: site.baseurl }}" type="text/javascript" charset="utf-8"></script> -->
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- // <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+
+    <script src="/js/lunr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/search.js"></script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
