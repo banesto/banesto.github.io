@@ -4,13 +4,17 @@ pre code {
   border-radius: $pre-border-radius;
 }
 
+p code {
+  padding: 5px;
+}
+
 pre,
 code {
   font-family: $monospace-font-family;
 }
 
 code {
-  color: #7a7a7a;
+  color: #505050;
 }
 
 pre {
@@ -55,12 +59,4 @@ pre a::before {
 
 pre a:first-of-type::before {
   padding-top: 10px;
-}
-
-pre a:last-of-type::before {
-  padding-bottom: 10px;
-}
-
-pre a:only-of-type::before {
-  padding: 10px;
 }
