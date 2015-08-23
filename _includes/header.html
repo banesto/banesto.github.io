@@ -5,6 +5,12 @@
         <img src="/images/me.jpeg" alt="Ernests Kečko" class="avatar" />
         {{ site.title }}
       </a>
+      <div id="search-block" class="right">
+        <form action="get" id="site-search" class="right">
+          <input type="text" id="search-box" class="search-input field-light" placeholder="Search">
+        </form>
+        <ul id="search-results" class="search-results"></ul>
+      </div>
       <nav class="site-nav">
         {% include navigation.html %}
       </nav>
@@ -12,12 +18,6 @@
       {% if site.show_social_icons %}
         {% include social_links.html %}
       {% endif %}
-
-      <form action="get" id="site_search" class="right">
-        <input type="text" id="search_box">
-      </form>
-
-      <ul id="search_results"></ul>
     </div>
   </div>
 </header>

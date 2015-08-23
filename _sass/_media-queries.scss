@@ -27,12 +27,17 @@
 
   .site-header .site-nav {
     float: right;
-    margin-top: .25rem;
+    margin-top: 0.8rem;
+    margin-right: $space-2;
   }
 
   blockquote {
     margin-left: $space-3;
     padding: $space-3;
+  }
+
+  #site-search {
+    display: none;
   }
 }
 
@@ -40,10 +45,50 @@
   html {
     font-size: 18px;
   }
+
+  .site-header .site-nav {
+    margin-top: 0.6rem;
+    margin-right: $space-2;
+  }
+
+  #site-search {
+    display: block;
+    padding-top: 0.18rem;
+  }
+
+  .search-results {
+    top: 2.45rem;
+    li {
+      a {
+        font-size: 0.8rem;
+      }
+      padding: 5px;
+    }
+  }
 }
 
 @media screen and (min-width: $viewport-large) {
   html {
     font-size: 20px;
+  }
+
+  .site-header .site-nav {
+    margin-top: 0.4rem;
+    margin-right: $space-2;
+  }
+
+  #site-search {
+    padding-top: 0;
+    display: block;
+  }
+
+  .search-results {
+    top: 2.25rem;
+    li {
+      a {
+        font-size: 0.8rem;
+      }
+      padding: 5px;
+    }
   }
 }

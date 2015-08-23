@@ -14,7 +14,7 @@
 }
 
 .site-nav {
-  margin-top: $space-2;
+  float: right;
 }
 
 .site-header nav a {
@@ -58,4 +58,46 @@
 .social-icons .left, .social-icons .right {
   text-align: center;
   float: none;
+}
+
+#site-search {
+  display: none;
+}
+
+#site-search input.search-input[type=text] {
+  margin: 0;
+}
+
+#search-block {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 2.25rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: $lightest-gray;
+}
+
+.search-results li {
+  line-height: 1;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+
+  a {
+    font-size: 0.8rem;
+    line-height: 1;
+    color: $darken-4;
+  }
+}
+.search-results li.active a,
+.search-results li a:hover, {
+  color: $dark-gray;
 }
