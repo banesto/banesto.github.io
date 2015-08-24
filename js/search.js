@@ -68,6 +68,25 @@ jQuery(function() {
     }
   });
 
+  $("#site-search").on('paste', function(e){
+    onPaste(e);
+    doSearch();
+  });
+
+  function onPaste(e){
+    var content;
+    e.preventDefault();
+
+    if ( e.originalEvent.clipboardData ){
+      content = (e.originalEvent || e).clipboardData.getData('text/plain');
+      document.execCommand('insertText', false, content);
+    } else if( window.clipboardData ){
+      content = window.clipboardData.getData('Text');
+      if (window.getSelection)
+        window.getSelection().getRangeAt(0).insertNode( document.createTextNode(content) );
+    }
+  }
+
   $('#search-box').blur(cancelSearch);
 
   function changeFocus(e) {
